@@ -1,0 +1,33 @@
+Global Parameters
+ISTART =  0            (Read existing wavefunction; if there)
+ISPIN =  2           (Spin polarised DFT)
+LREAL    = .FALSE.   # Real space projection
+ENCUT  =  600        (Cut-off energy for plane wave basis set, in eV)
+PREC   =  High       (Precision level)
+LWAVE  = .TRUE.        (Write WAVECAR or not)
+LCHARG = .TRUE.        (Write CHGCAR or not)
+ADDGRID= .TRUE.        (Increase grid; helps GGA convergence)
+# LVTOT  = .TRUE.      (Write total electrostatic potential into LOCPOT or not)
+# LVHAR  = .TRUE.      (Write ionic + Hartree electrostatic potential into LOCPOT or not)
+# NELECT =             (No. of electrons: charged cells; be careful)
+# LPLANE = .TRUE.      (Real space distribution; supercells)
+# NPAR   = 4           (Max is no. nodes; don't set for hybrids)
+# NWRITE = 2           (Medium-level output)
+# KPAR   = 2           (Divides k-grid into separate groups)
+# NGX    = 500         (FFT grid mesh density for nice charge/potential plots)
+# NGY    = 500         (FFT grid mesh density for nice charge/potential plots)
+# NGZ    = 500         (FFT grid mesh density for nice charge/potential plots)
+IVDW=1                #DFT-D3 method with Becke-Jonson damping (available as of VASP.5.3.4)            
+
+Lattice Relaxation
+NSW    =  300          (number of ionic steps. Make it odd.)
+ISMEAR =  0            (gaussian smearing method )
+SIGMA  =  0.01         (please check the width of the smearing)
+IBRION =  2            (Algorithm: 0-MD; 1-Quasi-New; 2-CG)
+ISIF   =  4            (optimize atomic coordinates and lattice parameters)
+EDIFFG = -1.0E-02      (Ionic convergence; eV/AA)
+EDIFF = 1E-5 
+#PREC   =  High         (Precision level)
+ALGO   =  Fast
+
+NWRITE  = 1
